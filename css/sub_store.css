@@ -93,6 +93,21 @@
 }
 
 /* popup */
+.popup-wrap{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
 .popup {
+    position: absolute;
     display: block;
+    background: #fff;
+    border: 1px solid var(--subColor);
+    width: 82rem;
+    height: 72rem;
 }
