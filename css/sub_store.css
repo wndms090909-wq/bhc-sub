@@ -1,5 +1,6 @@
 .container{
     position: relative;
+    padding: 3rem 0;
 }
 .store_title_wrap {
     position: relative;
@@ -17,6 +18,10 @@
 
 .store_title_wrap p>img {
     width: 100%;
+}
+.store_info_wrap .location_choice {
+    display: flex;
+    gap: 4rem;
 }
 
 .store_info {
@@ -98,12 +103,12 @@
 /* popup */
 .popup_wrap{
     position: fixed;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    /* display: none; */
+    display: none;
 }
 
 .popup {
@@ -159,18 +164,25 @@
 }
 
 .popup .map_items li{
+    display: flex;
+    align-items: center;
     padding: 1em 0;
-    /* margin: 3rem 0; */
     border-bottom: 1px solid black;
+}
+
+.popup .map_items li img {
+    width: 18px; 
+    /* margin-right: 0.5rem; */
 }
 
 .popup .map_items li span{
     font-size: 1.4rem;
-    font-weight: 300;
-    text-align: right;
+    font-weight: 400;
+    padding-left: 8rem;
 }
 .popup .map_items li .map_popup_title{
+    width: 8rem;
     font-size: 1.6rem;
     font-weight: 400;
-    padding: 0 8rem 0 1rem;
+    padding: 0 0 0 1rem;
 }
