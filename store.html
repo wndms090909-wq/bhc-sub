@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style_bhc.css">
     <link rel="stylesheet" href="./css/sub_store.css">
     <script defer src="./js/sub_store.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=95c7ab7737f71ac720687cb02b7b788b."></script>
 </head>
 
 <body>
@@ -190,7 +191,7 @@
             <p class="close_btn"><a href="#"><img src="./images/bhc_map_close.svg" alt="닫기버튼"></a></p>
             <div class="popup_content">
                 <h2>매장정보</h2>
-                <div class="map"><a href="#"><img src="./images/map_images.png" alt=""></a></div>
+                <div class="map" style="width:100%;height:350px;"><a href="#"></a></div>
                 <div class="map_info">
                     <h3 class="map_title">가양역점</h3>
                     <ul class="map_items">
@@ -212,7 +213,15 @@
             </div>
         </div>
     </div>
-    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=95c7ab7737f71ac720687cb02b7b788b."></script> -->
+    
+    <script>
+        var container = document.getElementById("map");
+        var options = {
+            center: new kakao.maps.LatLng(37.5618815, 126.8511103),
+            level: 3
+        }; 
+        var map = new kakao.maps.Map(container, options);
+    </script>
 </body>
 
 </html>
