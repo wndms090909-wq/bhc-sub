@@ -1,0 +1,284 @@
+.container {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.store_title_wrap {
+    position: relative;
+}
+
+.store_title_wrap .store_title {
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.store_title_wrap p>img {
+    width: 100%;
+}
+
+.store_info_wrap {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.store_info_wrap .location_choice {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4rem;
+}
+
+.location_choice {
+    border-bottom: 1px solid black;
+    padding-bottom: 3rem;
+}
+
+.location_choice .city_box,
+.location_choice .counties_box {
+    background: url(../images/city_arrow.svg) no-repeat;
+    background-position: right 15px center;
+    display: inline-block; 
+    width: 28rem;
+    height: 5.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    text-indent: 2rem;
+    line-height: 5.5rem;
+    cursor: pointer;
+}
+
+.location_choice .city {
+    position: relative;
+}
+
+.location_choice .counties {
+    position: relative;
+}
+
+.location_choice .city_list,
+.location_choice .counties_list {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: auto;
+    background: #fff;
+    border: 0.6px solid #747474;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.location_choice .city_list li,
+.location_choice .counties_list li {
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.location_choice .city_list li:hover,
+.location_choice .counties_list li:hover{
+    color: var(--pointColor);
+    background-color: #E3E3E3;
+}
+
+.location_search {
+    display: flex;
+    gap: 3rem
+}
+
+.location_search>input {
+    width: 50rem;
+    height: 5.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    text-indent: 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.location_search>p img {
+    width: 5rem;
+    height: 5.5rem;
+}
+
+.store_info {
+    max-width: 1380px;
+}
+
+.store_info .store {
+    padding: 2rem 0;
+}
+
+.store {
+    border-bottom: 1px solid #7E7E7E;
+}
+
+.store .store_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: 1px solid #7E7E7E; */
+}
+
+
+.store .store_items>li {
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.store .name {
+    padding-right: 32rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.store .addr {
+    padding-right: 20rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.store .detail.active {
+    background-image: url(../images/bhc_location_ye.svg);
+}
+
+.store .tel {
+    padding-right: 5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.store_page_wrap .page_list>li:hover {
+    background: var(--mainColor);
+    border-radius: 50%;
+}
+
+/* page */
+.page_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.page_area>a {
+    display: block;
+    gap: 3rem;
+}
+
+.page_area .page_list {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 3rem;
+}
+
+.page_list>li>a {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* popup */
+
+/* .popup_wrap {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+} */
+
+.popup_wrap {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 팝업과 배경 덮는 부모 */
+}
+
+.popup {
+    position: relative;
+    background: #fff;
+    border-radius: 30px;
+    width: 40%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 9px 7px 11px rgba(0, 0, 0, 0.2);
+    z-index: 1100; /* .popup_wrap보다 위 */
+    padding: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1200; /* 팝업 내부에서 더 위에 띄움 */
+}
+
+
+.popup .close_btn {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+}
+
+
+.popup h2 {
+    padding: 2rem 0 2rem 2rem;
+    font-weight: 600;
+    font-size: 2.8rem;
+}
+
+.popup .map_title {
+    padding: 2rem 2rem 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.popup .map_items {
+    padding: 0 1rem;
+}
+
+.popup .map_items li {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px solid black;
+}
+
+.popup .map_items li img {
+    width: 18px;
+    /* margin-right: 0.5rem; */
+}
+
+.popup .map_items li span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-left: 8rem;
+}
+
+.popup .map_items li .map_popup_title {
+    width: 8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0 0 0 1rem;
+}
