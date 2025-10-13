@@ -90,7 +90,8 @@
 
 .location_search {
     display: flex;
-    gap: 3rem
+    gap: 3rem;
+    /* background-color: #000; */
 }
 
 .location_search>input {
