@@ -5,6 +5,7 @@
 
 .store_title_wrap {
     position: relative;
+    padding-top: 8rem;
 }
 
 .store_title_wrap .store_title {
@@ -180,8 +181,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 2rem;
-    /* width: 90%; */
 }
 
 .page_area>a {
