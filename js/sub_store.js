@@ -9,10 +9,11 @@ let countiesList = document.querySelector(".counties_list");
 
 console.log(mapDetail);
 
+//지도
 mapDetail.addEventListener("click", () => {
     popup.style.display = "flex";
 
-    // 카카오맵일 경우 (map은 지도 객체)
+
     setTimeout(() => {
         map.relayout();
     }, 100);  // 팝업이 열리고 DOM 변경 반영 후 호출
@@ -25,10 +26,10 @@ closeBtn.addEventListener("click", (e) => {
 });
 
 
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+var mapContainer = document.getElementById('map'),
     mapOption = { 
-        center: new kakao.maps.LatLng(37.5618815, 126.8511103), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(37.5618815, 126.8511103),
+        level: 3
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption);
