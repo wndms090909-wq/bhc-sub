@@ -22,9 +22,9 @@ mapDetail.addEventListener("mouseout", () => {
 storeItem.addEventListener("click", () => {
     popup.style.display = "flex";
 
-
     setTimeout(() => {
         map.relayout();
+        map.setCenter(markerPosition);
     }, 100);  // 팝업이 열리고 DOM 변경 반영 후 호출
 });
 
@@ -37,8 +37,9 @@ closeBtn.addEventListener("click", (e) => {
 
 var mapContainer = document.getElementById('map'),
     mapOption = {
-        center: new kakao.maps.LatLng(37.5618815, 126.8511103),
-        level: 3
+        // center: new kakao.maps.LatLng(37.5618815, 126.8511103),
+        center: new kakao.maps.LatLng(37.5630503, 126.8501181),
+        level: 4
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption);
@@ -58,6 +59,7 @@ var marker = new kakao.maps.Marker({
 
 
 marker.setMap(map);
+map.setCenter(markerPosition);
 
 
 var content = '<div class="customoverlay">' +
