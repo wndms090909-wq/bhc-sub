@@ -15,7 +15,7 @@
     font-weight: 900;
     white-space: nowrap;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -161,7 +161,17 @@
     font-weight: 400;
 }
 
+.store .detail {
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-image: url(../images/bhc_location_bk.svg);
+}
+
 .store .detail.active {
+    display: block;
+    width: 42px;
+    height: 42px;
     background-image: url(../images/bhc_location_ye.svg);
 }
 
@@ -241,6 +251,8 @@
     z-index: 1100;
     /* .popup_wrap보다 위 */
     padding: 20px;
+    position: absolute;
+    top: 13rem;
 }
 
 #map {
@@ -292,6 +304,7 @@
     font-size: 1.4rem;
     font-weight: 400;
     padding-left: 8rem;
+    white-space: nowrap;
 }
 
 .popup .map_items li .map_popup_title {

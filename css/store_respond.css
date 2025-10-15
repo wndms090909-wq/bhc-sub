@@ -49,10 +49,22 @@
         right: 5rem;
         top: 2rem;
     }
+
     .page_area .page_list {
         padding: 0;
     }
-    
+
+    .popup {
+        width: 90%;
+        position: absolute;
+        top: 20rem;
+    }
+    .popup h2 {
+        padding: 1rem 0 2rem 2rem;
+    }
+    .popup .close_btn {
+        top: 20px;
+    }
 }
 
 @media screen and (max-width:780px) {
@@ -63,18 +75,22 @@
     .store_title_wrap .store_title {
         font-size: 6rem;
     }
+
 }
 
 @media screen and (max-width:440px) {
     .page_area .arr {
         display: none;
     }
-     .store .addr {
+
+    .store .addr {
         width: 50%;
         white-space: normal;
-     }
-     .store .detail {
+    }
+
+    .store .detail {
         right: 3rem;
         top: 3rem;
     }
+
 }
