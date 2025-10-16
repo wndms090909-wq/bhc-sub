@@ -1,32 +1,38 @@
 
-let storeItem = document.querySelector(".store");
+let storeItems = document.querySelectorAll(".store");
 let popup = document.querySelector(".popup_wrap");
 let closeBtn = document.querySelector(".popup .close_btn");
 let cityBox = document.querySelector(".city_box");
 let countiesBox = document.querySelector(".counties_box");
 let cityList = document.querySelector(".city_list");
 let countiesList = document.querySelector(".counties_list");
-let mapDetail = document.querySelector(".store .detail");
+let mapDetails = document.querySelectorAll(".store .detail");
 
-console.log(storeItem);
+console.log(storeItems);
 
-mapDetail.addEventListener("mouseenter", () => {
-    mapDetail.classList.add("active");
-})
+mapDetails.forEach((mapDetail) => {
+    mapDetail.addEventListener("mouseenter", () => {
+        mapDetail.classList.add("active");
+    })
 
-mapDetail.addEventListener("mouseout", () => {
-    mapDetail.classList.remove("active");
-})
-
-//지도
-storeItem.addEventListener("click", () => {
-    popup.style.display = "flex";
-
-    setTimeout(() => {
-        map.relayout();
-        map.setCenter(markerPosition);
-    }, 100);  // 팝업이 열리고 DOM 변경 반영 후 호출
+    mapDetail.addEventListener("mouseout", () => {
+        mapDetail.classList.remove("active");
+    })
 });
+
+
+//팝업
+storeItems.forEach((storeItem) => {
+    storeItem.addEventListener("click", () => {
+        popup.style.display = "flex";
+
+        setTimeout(() => {
+            map.relayout();
+            map.setCenter(markerPosition);
+        }, 100);  // 팝업이 열리고 DOM 변경 반영 후 호출
+    });
+})
+
 
 
 closeBtn.addEventListener("click", (e) => {
@@ -34,7 +40,7 @@ closeBtn.addEventListener("click", (e) => {
     popup.style.display = "none";
 });
 
-
+//지도
 var mapContainer = document.getElementById('map'),
     mapOption = {
         // center: new kakao.maps.LatLng(37.5618815, 126.8511103),
