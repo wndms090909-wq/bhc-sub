@@ -194,6 +194,8 @@
     gap: 3rem;
 }
 
+
+
 .page_area .page_list {
     display: flex;
     gap: 0.5rem;
@@ -208,6 +210,18 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
+}
+
+.page_list>li.active {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background-color: var(--mainColor);
+    border-radius: 2rem;
 }
 
 /* popup */
