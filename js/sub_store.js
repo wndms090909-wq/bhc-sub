@@ -8,15 +8,15 @@ let cityList = document.querySelector(".city_list");
 let countiesList = document.querySelector(".counties_list");
 let mapDetails = document.querySelectorAll(".store .detail");
 
-console.log(storeItems);
 
-mapDetails.forEach((mapDetail) => {
-    mapDetail.addEventListener("mouseenter", () => {
-        mapDetail.classList.add("active");
+
+storeItems.forEach((store, i) => {
+    store.addEventListener("mouseenter", () => {
+        mapDetails[i].classList.add("active");
     })
 
-    mapDetail.addEventListener("mouseout", () => {
-        mapDetail.classList.remove("active");
+    store.addEventListener("mouseleave", () => {
+        mapDetails[i].classList.remove("active");
     })
 });
 
